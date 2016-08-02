@@ -38,7 +38,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Random;
 
-
 import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.PluginResult;
@@ -54,8 +53,6 @@ import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
-
-import com.aabilio.pydowntv2.R;
 
 public class Downloader {
 	String id;

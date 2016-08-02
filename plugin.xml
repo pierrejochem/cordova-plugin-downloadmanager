@@ -10,6 +10,7 @@
 		<clobbers target="cordova.plugins.DownloadManager" />
 	</js-module>
 	<platform name="android">
+		<framework src="com.android.support:support-v4:+" value="gradle" />
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="DownloadManager">
 				<param name="android-package" value="org.apache.cordova.DownloadManager" />
