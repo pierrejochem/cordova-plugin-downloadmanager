@@ -146,7 +146,7 @@ public class Downloader {
 					
 					mNotifyManager = (NotificationManager) cordova.getActivity().getSystemService(Activity.NOTIFICATION_SERVICE);
 					mBuilder = new NotificationCompat.Builder(cordova.getActivity())
-						.setSmallIcon(R.drawable.ic_stat_notification)
+						/*.setSmallIcon(android.R.drawable.ic_stat_notification)*/
 						.setContentTitle(notificationTitle)
 						/*.setSubText("Tap to CANCEL")*/
 						.setTicker(ticker)
