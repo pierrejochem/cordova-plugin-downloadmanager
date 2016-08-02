@@ -62,7 +62,7 @@ public class DownloadManager extends CordovaPlugin {
 											fileUrl.substring(fileUrl.lastIndexOf("/")+1);
 						String filePath   = params.has("filePath") ? 
 											params.getString("filePath"):
-											cordova.getActivity().getString(cordova.getActivity().getResources().getIdentifier("app_name", "string", cordova.getActivity().getPackageName())));
+											cordova.getActivity().getString(cordova.getActivity().getResources().getIdentifier("app_name", "string", cordova.getActivity().getPackageName()));
 						String startToast = params.has("startToast") ? 
 											params.getString("startToast"):
 											"Download Start!";
