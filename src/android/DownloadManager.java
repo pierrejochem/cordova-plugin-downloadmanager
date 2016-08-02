@@ -47,6 +47,10 @@ public class DownloadManager extends CordovaPlugin {
 	
 	DownloadControllerSingleton downloading_ids = DownloadControllerSingleton.getInstance();
 
+	private String getStringResource(String name) {
+		return this.activity.getString(this.activity.getResources().getIdentifier(name, "string", this.activity.getPackageName()));
+	}
+	
 	@Override
 	public boolean execute(String action, final JSONArray args, final CallbackContext callbackContext) {
 		if (action.equals("start")) {
@@ -62,7 +66,7 @@ public class DownloadManager extends CordovaPlugin {
 											fileUrl.substring(fileUrl.lastIndexOf("/")+1);
 						String filePath   = params.has("filePath") ? 
 											params.getString("filePath"):
-											cordova.getActivity().getString(R.string.app_name);
+											this.getStringResource("app_name");
 						String startToast = params.has("startToast") ? 
 											params.getString("startToast"):
 											"Download Start!";
