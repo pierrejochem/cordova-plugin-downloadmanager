@@ -1,0 +1,25 @@
+{
+  "name": "DownloadManager",
+  "version": "0.0.1",
+  "description": "Cordova Download Manager",
+  "cordova": {
+    "id": "cordova-plugin-downloadmanager",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pierrejochem/cordova-plugin-downloadmanager.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Pierre Jochem",
+  "license": "GPL v3",
+  "bugs": {
+    "url": "https://github.com/pierrejochem/cordova-plugin-downloadmanager/issues"
+  },
+  "homepage": "https://github.com/pierrejochem/cordova-plugin-downloadmanager#readme"
+}
