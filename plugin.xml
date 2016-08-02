@@ -1,17 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugin-downloadmanager" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>DownloadManager</name>
+	<description>Cordova Download Manager Plugin</description>
+	<license>GPL v3</license>
+	<keywords>cordova,download,manager</keywords>
+	<repo>https://github.com/pierrejochem/cordova-plugin-downloadmanager.git</repo>
+	<issue>https://github.com/pierrejochem/cordova-plugin-downloadmanager/issues</issue>	
 	<js-module name="DownloadManager" src="www/DownloadManager.js">
 		<clobbers target="cordova.plugins.DownloadManager" />
 	</js-module>
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="DownloadManager">
-				<param name="android-package" value="cordova-plugin-downloadmanager.DownloadManager" />
+				<param name="android-package" value="org.apache.cordova.DownloadManager" />
 			</feature>
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 		</config-file>		
 		<source-file src="src/android/DownloadManager.java" target-dir="src/cordova-plugin-downloadmanager/DownloadManager" />
