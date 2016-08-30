@@ -6,24 +6,26 @@
 
 */
 
-cordova.define("cordova/plugin/DownloadManager/DownloadManager", function (require, exports, module) {
-	var exec = require("cordova/exec");
- 	module.exports = {
-  		start: function (message, win, fail) {
-   			exec(win, fail, "DownloadManager", "start", [message]);
-  		},
-  		cancel: function (message, win, fail) {
-  			exec(win, fail, "DownloadManager", "cancel", [message]);
-  		},
-  		isdownloading: function (message, win ,fail) {
-  			exec(win, fail, "DownloadManager", "isdownloading", [message]);
-  		}
- 	};
-});
+var DownloadManager = function() {};
+
+DownloadManager.prototype.start = function(message, win, fail)
+{
+	return cordova.exec(win, fail, "DownloadManager", "start", [message]);
+};
+
+DownloadManager.prototype.cancel = function(message, win, fail)
+{
+	return cordova.exec(win, fail, "DownloadManager", "cancel", [message]);
+};
+
+DownloadManager.prototype.isdownloading = function(message, win, fail)
+{
+	return cordova.exec(win, fail, "DownloadManager", "isdownloading", [message]);
+};
 
 var dm = function (action, options, win, fail) {
-	var downloader = cordova.require("cordova/plugin/DownloadManager/DownloadManager");
-	o = {
+	var downloader = new DownloadManager();
+	var o = {
 		id: options.id || "",
 		url: options.url || "",
 		filePath: options.filePath || "youraplication",
@@ -49,6 +51,7 @@ var dm = function (action, options, win, fail) {
 	} else {
 		alert("[ERROR] DownloadManager (JavaScript): Action not supported");
 	}
+	
 }
 
 if(!window.plugins) window.plugins = {};
