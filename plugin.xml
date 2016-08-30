@@ -6,8 +6,8 @@
 	<keywords>cordova,download,manager</keywords>
 	<repo>https://github.com/pierrejochem/cordova-plugin-downloadmanager.git</repo>
 	<issue>https://github.com/pierrejochem/cordova-plugin-downloadmanager/issues</issue>	
-	<js-module name="DownloadManager" src="www/DownloadManager.js">
-		<clobbers target="cordova.plugins.DownloadManager" />
+	<js-module name="DownloadManager" src="www/js/DownloadManager.js">
+		<clobbers target="DownloadManager" />
 	</js-module>
 	<platform name="android">
 		<framework src="com.android.support:support-v4:+" value="gradle" />
