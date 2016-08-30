@@ -1,14 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-downloadmanager" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<plugin id="cordova-plugin-downloadmanager" 
+		version="0.0.1" 
+		xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+		xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>DownloadManager</name>
 	<description>Cordova Download Manager Plugin</description>
 	<license>GPL v3</license>
 	<keywords>cordova,download,manager</keywords>
 	<repo>https://github.com/pierrejochem/cordova-plugin-downloadmanager.git</repo>
-	<issue>https://github.com/pierrejochem/cordova-plugin-downloadmanager/issues</issue>	
+	<issue>https://github.com/pierrejochem/cordova-plugin-downloadmanager/issues</issue>
+	
 	<js-module name="DownloadManager" src="www/js/DownloadManager.js">
 		<clobbers target="DownloadManager" />
 	</js-module>
+	
 	<platform name="android">
 		<framework src="com.android.support:support-v4:+" value="gradle" />
 		<config-file parent="/*" target="res/xml/config.xml">
@@ -20,9 +25,9 @@
 			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 		</config-file>		
-		<source-file src="src/android/DownloadManager.java" target-dir="src/cordova-plugin-downloadmanager/DownloadManager" />
-		<source-file src="src/android/DownloadControllerSingleton.java" target-dir="src/cordova-plugin-downloadmanager/DownloadManager" />
-		<source-file src="src/android/Downloader.java" target-dir="src/cordova-plugin-downloadmanager/DownloadManager" />	
+		<source-file src="src/android/DownloadManager.java" target-dir="src/org/apache/cordova/DownloadManagerDownloadManager" />
+		<source-file src="src/android/DownloadControllerSingleton.java" target-dir="src/org/apache/cordova/DownloadManagerDownloadManager" />
+		<source-file src="src/android/Downloader.java" target-dir="src/org/apache/cordova/DownloadManagerDownloadManager" />	
 		<!-- Icon files -->
 		<resource-file src="src/android/res/drawable-hdpi/ic_stat_notification.png" target="res/drawable-hdpi/ic_stat_notification.png" />
 		<resource-file src="src/android/res/drawable-hdpi-v9/ic_stat_notification.png" target="res/drawable-hdpi-v9/ic_stat_notification.png" />
